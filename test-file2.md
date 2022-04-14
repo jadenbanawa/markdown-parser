@@ -1,1 +1,1 @@
-[Diff](https://github.com/jadenbanawa/markdown-parser)
+[Different](https://github.com/jadenbanawa/markdown-parser)
