@@ -1,8 +1,3 @@
-# file with image
-# multiple links
+# title
 
-[Link](link.com)
-
-![alt text](image.jpg)
-
-[Link](link.com)
+[]link goes here!
