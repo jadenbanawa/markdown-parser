@@ -13,22 +13,17 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void markdownTest1() {
-       
-        try{
+    public void markdownTest1() throws IOException {
 
-        List thisList = List.of("https://something.com");
-
-        MarkdownParse mpObj = new MarkdownParse();
-        Path filePath = Path.of("test-file.md");
-        String fileContent = Files.readString(filePath);
-        ArrayList<String> outputList = mpObj.getLinks(fileContent);
+        ArrayList<String> thisList = new ArrayList<>();
+        thisList.add("https://something.com");
+        // C:\Users\jaden\OneDrive\Documents\GitHub\markdown-parser\test-file.md
+        Path fileName = Path.of("C:/Users/jaden/OneDrive/Documents/GitHub/markdown-parser/test-file.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> outputList = MarkdownParse.getLinks(content);
         assertEquals(thisList, outputList);
+             
 
-        }catch(IOException e){
-
-        }
- 
     }
 
     @Test
