@@ -14,12 +14,13 @@ public class MarkdownParseTest {
 
     @Test
     public void markdownTest1() {
-        List thisList = List.of("https://something.com", "some-thing.html");
+       
+        try{
+
+        List thisList = List.of("https://something.com");
 
         MarkdownParse mpObj = new MarkdownParse();
         Path filePath = Path.of("test-file.md");
-        try{
-
         String fileContent = Files.readString(filePath);
         ArrayList<String> outputList = mpObj.getLinks(fileContent);
         assertEquals(thisList, outputList);
